@@ -1,129 +1,114 @@
-// index.js
+const introLink = document.getElementById("intro-link");
 
-//.nav_a
-//.slider
-//home about portfolio contact
+const myWorkLinks = document.querySelectorAll(".my-work");
+const learnMoreLinks = document.querySelectorAll(".learn-more");
 
-const links = document.querySelectorAll(".nav_a");
+const contactLink = document.getElementById("contact-link");
+const links = document.getElementById("links");
 
-function handleIntersection(entries, observer) {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      const sectionId = entry.target.getAttribute("id");
-      const slider = document.getElementById("slider");
+const menuButton = document.getElementById("menu-btn");
+const closeMenuBtn = document.getElementById("close-menu");
+const menuLinks = document.querySelectorAll(".ul-link");
 
-      switch (sectionId) {
-        case "home":
-          slider.style.left = "0";
-          break;
-        case "about":
-          slider.style.left = "100px";
-          break;
-        case "portfolio":
-          slider.style.left = "200px";
-          break;
-        case "contact":
-          slider.style.left = "300px";
-          break;
-        default:
-          slider.style.left = "0";
-      }
+// Define a function to execute when the display size is above a certain width
+function executeOnLargeScreen() {
+  // Your code for larger screens here
 
-      links.forEach((link, index) => {
-        link.classList.toggle(
-          "active",
-          index === ["home", "about", "portfolio", "contact"].indexOf(sectionId)
-        );
+  introLink.addEventListener("click", () => {
+    links.style.transform = "translateX(calc(50% - 75px))";
+    introLink.classList.add("active");
+    myWorkLinks.forEach((link) => {
+      link.classList.remove("active");
+    });
+    learnMoreLinks.forEach((link) => {
+      link.classList.remove("active");
+    });
+    contactLink.classList.remove("active");
+  });
+
+  myWorkLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      links.style.transform = "translateX(calc(25% - 75px))";
+      introLink.classList.remove("active");
+      myWorkLinks.forEach((link) => {
+        link.classList.add("active");
       });
-    }
+      learnMoreLinks.forEach((link) => {
+        link.classList.remove("active");
+      });
+      contactLink.classList.remove("active");
+    });
   });
+
+  learnMoreLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      links.style.transform = "translateX(calc(-25% + 75px))";
+      introLink.classList.remove("active");
+      myWorkLinks.forEach((link) => {
+        link.classList.remove("active");
+      });
+      learnMoreLinks.forEach((link) => {
+        link.classList.add("active");
+      });
+      contactLink.classList.remove("active");
+    });
+  });
+  contactLink.addEventListener("click", () => {
+    links.style.transform = "translateX(calc(-50% + 75px))";
+    introLink.classList.remove("active");
+    myWorkLinks.forEach((link) => {
+      link.classList.remove("active");
+    });
+    learnMoreLinks.forEach((link) => {
+      link.classList.remove("active");
+    });
+    contactLink.classList.add("active");
+  });
+
+  console.log("Executing on large screen");
 }
 
-const observer = new IntersectionObserver(handleIntersection, {
-  root: null,
-  rootMargin: "0px",
-  threshold: 0.5,
-});
+// Define a function to execute when the display size is below a certain width
+function executeOnSmallScreen() {
+  // Your code for smaller screens here
 
-const sections = document.querySelectorAll("section");
-
-sections.forEach((section) => {
-  observer.observe(section);
-});
-
-const port_item = document.querySelectorAll(".port_item");
-const right = document.getElementById("portfolioScroll");
-const objectHeight = right.clientHeight;
-
-right.addEventListener("scroll", () => {
-  const active_index = Math.floor(right.scrollTop / objectHeight);
-
-  port_item.forEach((item, index) => {
-    if (index === active_index) {
-      item.classList.add("active");
-    } else {
-      item.classList.remove("active");
-    }
+  menuButton.addEventListener("click", () => {
+    links.style.right = "0";
+    closeMenuBtn.style.display = "flex";
+    menuButton.style.display = "none";
   });
-});
-
-const gallery = document.querySelector(".gallery");
-const dots = document.querySelectorAll(".dot");
-const itemWidth = gallery.clientWidth;
-
-gallery.addEventListener("scroll", () => {
-  const activeIndex = Math.floor(gallery.scrollLeft / itemWidth);
-
-  dots.forEach((dot, index) => {
-    if (index === activeIndex) {
-      dot.classList.add("active");
-    } else {
-      dot.classList.remove("active");
-    }
+  closeMenuBtn.addEventListener("click", () => {
+    links.style.right = "-100vw";
+    closeMenuBtn.style.display = "none";
+    menuButton.style.display = "block";
   });
-});
 
-const slides = document.querySelectorAll(".slide");
-var slideIndex = 0;
-var slideSpeed = 0.05;
-var slideDelay = 6000;
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      links.style.right = "-100vw";
+      closeMenuBtn.style.display = "none";
+      menuButton.style.display = "block";
+      menuLinks.forEach((inactiveLink) => {
+        inactiveLink.classList.remove("active");
+      });
+      link.classList.add("active");
+    });
+  });
 
-function slidePlay() {
-  var nextSlideIndex = slideIndex + 1;
+  console.log("Executing on small screen");
+}
 
-  if (nextSlideIndex >= slides.length) {
-    nextSlideIndex = 0;
+// Function to handle window resize
+function handleResize() {
+  if (window.innerWidth >= 768) {
+    executeOnLargeScreen();
+  } else {
+    executeOnSmallScreen();
   }
-
-  var nextSlidePosition =
-    slides[nextSlideIndex].offsetLeft - gallery.offsetLeft;
-
-  gallery.scrollTo({
-    left: nextSlidePosition,
-    behavior: "smooth",
-  });
-
-  slideIndex = nextSlideIndex;
-  setTimeout(slidePlay, slideDelay);
 }
-setTimeout(slidePlay, slideDelay);
 
-const leftButton = document.getElementById("left_btn");
-const rightButton = document.querySelector(".right_btn");
-const revContainer = document.querySelector(".rev_cont");
+// Initial check when the page loads
+handleResize();
 
-// Scroll to the left when left button is clicked
-leftButton.addEventListener("click", () => {
-  revContainer.scrollBy({
-    left: -300, // Adjust this value based on your review item width
-    behavior: "smooth",
-  });
-});
-
-// Scroll to the right when right button is clicked
-rightButton.addEventListener("click", () => {
-  revContainer.scrollBy({
-    left: 300, // Adjust this value based on your review item width
-    behavior: "smooth",
-  });
-});
+// Add an event listener to check on window resize
+window.addEventListener("resize", handleResize);
