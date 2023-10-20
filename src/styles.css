@@ -323,17 +323,18 @@ html {
   }
   html body .nav ul {
     width: 100vw;
-    height: 100vh;
+    height: 0;
+    overflow: hidden;
     position: absolute;
     top: 99%;
     z-index: 10;
     background-color: rgba(0, 0, 0, 0.9647058824);
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     gap: 20px;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-out;
   }
   html body .nav ul a {
     width: 70%;
@@ -454,7 +455,7 @@ html {
   }
   html body .container section:nth-child(1) .left h2 span {
     font-family: "Orbitron";
-    font-size: 48px;
+    font-size: 44px;
     font-style: normal;
     font-weight: 700;
     letter-spacing: 0px;
