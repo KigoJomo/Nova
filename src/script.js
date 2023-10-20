@@ -11,72 +11,12 @@ const closeMenuBtn = document.getElementById("close-menu");
 const menuLinks = document.querySelectorAll(".ul-link");
 
 // Define a function to execute when the display size is above a certain width
-// function executeOnLargeScreen() {
-//   // Your code for larger screens here
-
-//   introLink.addEventListener("click", () => {
-//     links.style.transform = "translateX(calc(50% - 75px))";
-//     introLink.classList.add("active");
-//     myWorkLinks.forEach((link) => {
-//       link.classList.remove("active");
-//     });
-//     learnMoreLinks.forEach((link) => {
-//       link.classList.remove("active");
-//     });
-//     contactLink.classList.remove("active");
-//   });
-
-//   myWorkLinks.forEach((link) => {
-//     link.addEventListener("click", () => {
-//       links.style.transform = "translateX(calc(25% - 75px))";
-//       introLink.classList.remove("active");
-//       myWorkLinks.forEach((link) => {
-//         link.classList.add("active");
-//       });
-//       learnMoreLinks.forEach((link) => {
-//         link.classList.remove("active");
-//       });
-//       contactLink.classList.remove("active");
-//     });
-//   });
-
-//   learnMoreLinks.forEach((link) => {
-//     link.addEventListener("click", () => {
-//       links.style.transform = "translateX(calc(-25% + 75px))";
-//       introLink.classList.remove("active");
-//       myWorkLinks.forEach((link) => {
-//         link.classList.remove("active");
-//       });
-//       learnMoreLinks.forEach((link) => {
-//         link.classList.add("active");
-//       });
-//       contactLink.classList.remove("active");
-//     });
-//   });
-//   contactLink.addEventListener("click", () => {
-//     links.style.transform = "translateX(calc(-50% + 75px))";
-//     introLink.classList.remove("active");
-//     myWorkLinks.forEach((link) => {
-//       link.classList.remove("active");
-//     });
-//     learnMoreLinks.forEach((link) => {
-//       link.classList.remove("active");
-//     });
-//     contactLink.classList.add("active");
-//   });
-
-//   console.log("Executing on large screen");
-// }
-
-// Define a function to execute when the display size is below a certain width
 
 function executeOnLargeScreen() {
   // Your code for larger screens here
 
   // A common function to handle link clicks
-  function handleLinkClick(link, index) {
-    links.style.transform = `translateX(calc(${index}% - 75px))`;
-    // links.style.transform = `translateX(${index}%)`;
+  function handleLinkClick(link) {
     introLink.classList.remove("active");
     myWorkLinks.forEach((myWorkLink) => myWorkLink.classList.remove("active"));
     learnMoreLinks.forEach((learnMoreLink) =>
@@ -87,20 +27,19 @@ function executeOnLargeScreen() {
   }
 
   // Event listeners for each link
-  introLink.addEventListener("click", () => handleLinkClick(introLink, 50));
+  introLink.addEventListener("click", () => handleLinkClick(introLink));
   myWorkLinks.forEach((link) => {
-    link.addEventListener("click", () => handleLinkClick(link, 25));
+    link.addEventListener("click", () => handleLinkClick(link));
   });
   learnMoreLinks.forEach((link) => {
-    link.addEventListener("click", () => handleLinkClick(link, -25));
+    link.addEventListener("click", () => handleLinkClick(link));
   });
-  contactLink.addEventListener("click", () =>
-    handleLinkClick(contactLink, -50)
-  );
+  contactLink.addEventListener("click", () => handleLinkClick(contactLink));
 
   console.log("Executing on a large screen");
 }
 
+// Define a function to execute when the display size is below a certain width
 
 function executeOnSmallScreen() {
   // Your code for smaller screens here

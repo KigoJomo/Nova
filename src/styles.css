@@ -25,20 +25,16 @@ html {
     position: relative;
   }
   html body .nav {
-    display: flex;
     z-index: 10;
     width: 100%;
     height: 70px;
-    padding: 0px 20px;
-    justify-content: center;
+    padding: 0px 50px;
+    display: flex;
     align-items: center;
+    justify-content: space-between;
     position: absolute;
     top: 20px;
     overflow: hidden;
-  }
-  html body .nav .logo {
-    position: absolute;
-    left: 30px;
   }
   html body .nav .logo img {
     width: 40px;
@@ -48,14 +44,14 @@ html {
   }
   html body .nav ul {
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 0px;
-    transform: translateX(calc(50% - 75px));
+    justify-content: center;
+    gap: 50px;
     transition: all 1s ease-in-out;
   }
   html body .nav ul a {
-    width: 150px;
+    width: -moz-fit-content;
+    width: fit-content;
     color: #aaa;
     font-family: "Poppins";
     font-size: 12px;
