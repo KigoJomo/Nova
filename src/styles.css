@@ -109,7 +109,7 @@ html {
     justify-content: center;
     gap: 50px;
     padding: 110px 50px 50px 50px;
-    background: url(../res/Intro.webp) no-repeat center/cover;
+    background: url(../res/Intro.webp) no-repeat fixed center/cover;
     position: relative;
   }
   html body .container section:nth-child(1)::before {
@@ -119,7 +119,7 @@ html {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(12, 12, 12, 0.6039215686);
+    background-color: rgba(12, 12, 12, 0.7450980392);
     z-index: 0;
   }
   html body .container section:nth-child(1) .left {
@@ -146,15 +146,14 @@ html {
     gap: 0px;
   }
   html body .container section:nth-child(1) .left h2 span {
-    text-shadow: 5px 3px 50px #393838;
     font-family: Orbitron;
     font-size: 85px;
     font-style: normal;
     font-weight: 700;
     letter-spacing: 9.6px;
     text-transform: capitalize;
-    background: linear-gradient(-160deg, white, white, gray, rgb(48, 48, 48));
     color: transparent;
+    background: url(../res/alps.webp) no-repeat center/cover;
     -webkit-background-clip: text;
             background-clip: text;
   }
@@ -257,7 +256,7 @@ html {
     z-index: 1;
   }
   html body .container section:nth-child(2) {
-    background: url(../res/My\ Work.webp) no-repeat center/cover;
+    background: url(../res/My\ Work.webp) no-repeat fixed center/cover;
     position: relative;
   }
   html body .container section:nth-child(2)::before {
@@ -271,7 +270,7 @@ html {
     z-index: 0;
   }
   html body .container section:nth-child(3) {
-    background: url(../res/services.webp) no-repeat center/cover;
+    background: url(../res/services.webp) no-repeat fixed center/cover;
     position: relative;
   }
   html body .container section:nth-child(3)::before {
@@ -285,7 +284,7 @@ html {
     z-index: 0;
   }
   html body .container section:nth-child(4) {
-    background: url(../res/about.webp) no-repeat center/cover;
+    background: url(../res/about.webp) no-repeat fixed center/cover;
     position: relative;
   }
   html body .container section:nth-child(4)::before {
@@ -422,7 +421,7 @@ html {
     gap: 2vh;
     padding: 0 20px;
     padding-top: 7vh;
-    background: url(../res/Intro.webp) no-repeat center/cover;
+    background: url(../res/Intro.webp) no-repeat fixed center/cover;
     position: relative;
   }
   html body .container section:nth-child(1)::before {
@@ -432,7 +431,7 @@ html {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(12, 12, 12, 0.6039215686);
+    background-color: rgba(12, 12, 12, 0.7450980392);
     z-index: 0;
   }
   html body .container section:nth-child(1) .image {
@@ -488,8 +487,8 @@ html {
     font-weight: 700;
     letter-spacing: 0px;
     text-transform: capitalize;
-    background: linear-gradient(-160deg, white, white, gray, rgb(48, 48, 48));
     color: transparent;
+    background: url(../res/alps.webp) no-repeat center/cover;
     -webkit-background-clip: text;
             background-clip: text;
   }
@@ -573,7 +572,7 @@ html {
     z-index: 1;
   }
   html body .container section:nth-child(2) {
-    background: url(../res/My\ Work.webp) no-repeat center/cover;
+    background: url(../res/My\ Work.webp) no-repeat fixed center/cover;
     position: relative;
   }
   html body .container section:nth-child(2)::before {
@@ -587,7 +586,7 @@ html {
     z-index: 0;
   }
   html body .container section:nth-child(3) {
-    background: url(../res/services.webp) no-repeat center/cover;
+    background: url(../res/services.webp) no-repeat fixed center/cover;
     position: relative;
   }
   html body .container section:nth-child(3)::before {
@@ -601,7 +600,7 @@ html {
     z-index: 0;
   }
   html body .container section:nth-child(4) {
-    background: url(../res/about.webp) no-repeat center/cover;
+    background: url(../res/about.webp) no-repeat fixed center/cover;
     position: relative;
   }
   html body .container section:nth-child(4)::before {

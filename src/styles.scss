@@ -121,7 +121,7 @@ html {
             justify-content: center;
             gap: 50px;
             padding: 110px 50px 50px 50px;
-            background: url(../res/Intro.webp) no-repeat center/cover;
+            background: url(../res/Intro.webp) no-repeat fixed center/cover;
             position: relative;
 
             &::before {
@@ -131,7 +131,7 @@ html {
               bottom: 0;
               left: 0;
               right: 0;
-              background-color: #0c0c0c9a;
+              background-color: #0c0c0cbe;
               z-index: 0;
             }
 
@@ -157,21 +157,15 @@ html {
                 justify-content: flex-start;
                 gap: 0px;
                 span {
-                  text-shadow: 5px 3px 50px #393838;
+                  // text-shadow: 5px 3px 50px #393838;
                   font-family: Orbitron;
                   font-size: clamp(78px, 85px, 92px);
                   font-style: normal;
                   font-weight: 700;
                   letter-spacing: 9.6px;
                   text-transform: capitalize;
-                  background: linear-gradient(
-                    -160deg,
-                    white,
-                    white,
-                    gray,
-                    rgb(48, 48, 48)
-                  );
                   color: transparent;
+                  background: url(../res/alps.webp) no-repeat center/cover;
                   background-clip: text;
                 }
               }
@@ -278,7 +272,7 @@ html {
             }
           }
           &:nth-child(2){
-            background: url(../res/My\ Work.webp) no-repeat center/cover;
+            background: url(../res/My\ Work.webp) no-repeat fixed center/cover;
             position: relative;
 
             &::before {
@@ -293,7 +287,7 @@ html {
             }
           }
           &:nth-child(3){
-            background: url(../res/services.webp) no-repeat center/cover;
+            background: url(../res/services.webp) no-repeat fixed center/cover;
             position: relative;
 
             &::before {
@@ -308,7 +302,7 @@ html {
             }
           }
           &:nth-child(4){
-            background: url(../res/about.webp) no-repeat center/cover;
+            background: url(../res/about.webp) no-repeat fixed center/cover;
             position: relative;
 
             &::before {
@@ -463,7 +457,7 @@ html {
             gap: 2vh;
             padding: 0 20px;
             padding-top: 7vh;
-            background: url(../res/Intro.webp) no-repeat center/cover;
+            background: url(../res/Intro.webp) no-repeat fixed center/cover;
             position: relative;
 
             &::before {
@@ -473,7 +467,7 @@ html {
               bottom: 0;
               left: 0;
               right: 0;
-              background-color: #0c0c0c9a;
+              background-color: #0c0c0cbe;
               z-index: 0;
             }
 
@@ -531,14 +525,8 @@ html {
                   font-weight: 700;
                   letter-spacing: 0px;
                   text-transform: capitalize;
-                  background: linear-gradient(
-                    -160deg,
-                    white,
-                    white,
-                    gray,
-                    rgb(48, 48, 48)
-                  );
                   color: transparent;
+                  background: url(../res/alps.webp) no-repeat center/cover;
                   background-clip: text;
                 }
               }
@@ -630,7 +618,7 @@ html {
             }
           }
           &:nth-child(2){
-            background: url(../res/My\ Work.webp) no-repeat center/cover;
+            background: url(../res/My\ Work.webp) no-repeat fixed center/cover;
             position: relative;
 
             &::before {
@@ -645,7 +633,7 @@ html {
             }
           }
           &:nth-child(3){
-            background: url(../res/services.webp) no-repeat center/cover;
+            background: url(../res/services.webp) no-repeat fixed center/cover;
             position: relative;
 
             &::before {
@@ -660,7 +648,7 @@ html {
             }
           }
           &:nth-child(4){
-            background: url(../res/about.webp) no-repeat center/cover;
+            background: url(../res/about.webp) no-repeat fixed center/cover;
             position: relative;
 
             &::before {
