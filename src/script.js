@@ -10,6 +10,31 @@ const menuButton = document.getElementById("menu-btn");
 const closeMenuBtn = document.getElementById("close-menu");
 const menuLinks = document.querySelectorAll(".ul-link");
 
+const sections = document.querySelectorAll("section");
+
+const elementIsVisibleInViewport = (el, partiallyVisible = false) => {
+  const { top, left, bottom, right } = el.getBoundingClientRect();
+  const { innerHeight, innerWidth } = window;
+
+  return partiallyVisible
+    ? ((top > 0 && top < innerHeight) ||
+        (bottom > 0 && bottom < innerHeight)) &&
+        ((left > 0 && left < innerWidth) || (right > 0 && right < innerWidth))
+    : top >= 0 && left >= 0 && bottom <= innerHeight && right <= innerWidth;
+};
+
+function handleScroll() {
+  sections.forEach((section) => {
+    if (elementIsVisibleInViewport(section)) {
+      const sectionId = section.id;
+      const sectionLink = document.querySelector(`a[href="#${sectionId}"]`);
+      menuLinks.forEach((link) => link.classList.remove("active"));
+      sectionLink.classList.add("active");
+    }
+  });
+}
+
+
 // Define a function to execute when the display size is above a certain width
 
 function executeOnLargeScreen() {
@@ -106,6 +131,10 @@ function handleResize() {
 
 // Initial check when the page loads
 handleResize();
+handleScroll();
 
 // Add an event listener to check on window resize
 window.addEventListener("resize", handleResize);
+const container = document.querySelector(".container");
+container.addEventListener("scroll", handleScroll);
+// window.addEventListener("scroll", handleScroll);

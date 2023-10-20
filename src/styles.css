@@ -330,7 +330,7 @@ html {
     align-items: center;
     justify-content: flex-start;
     gap: 20px;
-    transition: all 0.5s ease-out;
+    transition: all 0.5s ease;
   }
   html body .nav ul a {
     width: 70%;
