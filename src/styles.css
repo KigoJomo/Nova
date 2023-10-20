@@ -235,38 +235,68 @@ html {
     display: none;
     width: 100%;
   }
-  html body .container section:nth-child(2) {
+  html body .container section:nth-child(2), html body .container section:nth-child(3), html body .container section:nth-child(4) {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 20px;
   }
-  html body .container section:nth-child(2) h1 {
+  html body .container section:nth-child(2) h1, html body .container section:nth-child(3) h1, html body .container section:nth-child(4) h1 {
+    text-align: center;
     text-transform: capitalize;
     font-family: "Orbitron";
-    font-size: 89px;
+    font-size: 74px;
+    z-index: 1;
+  }
+  html body .container section:nth-child(2) h5, html body .container section:nth-child(3) h5, html body .container section:nth-child(4) h5 {
+    font-family: "Poppins";
+    font-size: 16px;
+    color: #aaaaaa;
+    font-weight: 400;
+    z-index: 1;
+  }
+  html body .container section:nth-child(2) {
+    background: url(../res/My\ Work.webp) no-repeat center/cover;
+    position: relative;
+  }
+  html body .container section:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(12, 12, 12, 0.6039215686);
+    z-index: 0;
   }
   html body .container section:nth-child(3) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    background: url(../res/services.webp) no-repeat center/cover;
+    position: relative;
   }
-  html body .container section:nth-child(3) h1 {
-    text-transform: capitalize;
-    font-family: "Orbitron";
-    font-size: 89px;
+  html body .container section:nth-child(3)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(12, 12, 12, 0.6039215686);
+    z-index: 0;
   }
   html body .container section:nth-child(4) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    background: url(../res/about.webp) no-repeat center/cover;
+    position: relative;
   }
-  html body .container section:nth-child(4) h1 {
-    text-transform: capitalize;
-    font-family: "Orbitron";
-    font-size: 89px;
+  html body .container section:nth-child(4)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(12, 12, 12, 0.6039215686);
+    z-index: 0;
   }
 }
 @media (max-width: 767px) {
@@ -371,6 +401,7 @@ html {
     overflow-x: hidden;
     overflow-y: scroll;
     scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -381,6 +412,7 @@ html {
     width: 100vw;
     height: 100vh;
     flex-shrink: 0;
+    scroll-snap-align: start;
   }
   html body .container section:nth-child(1) {
     display: flex;
@@ -531,11 +563,55 @@ html {
     text-transform: capitalize;
     font-family: "Orbitron";
     font-size: 48px;
+    z-index: 1;
   }
   html body .container section:nth-child(2) h5, html body .container section:nth-child(3) h5, html body .container section:nth-child(4) h5 {
     font-family: "Poppins";
     font-size: 16px;
     color: #aaaaaa;
     font-weight: 400;
+    z-index: 1;
+  }
+  html body .container section:nth-child(2) {
+    background: url(../res/My\ Work.webp) no-repeat center/cover;
+    position: relative;
+  }
+  html body .container section:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(12, 12, 12, 0.6039215686);
+    z-index: 0;
+  }
+  html body .container section:nth-child(3) {
+    background: url(../res/services.webp) no-repeat center/cover;
+    position: relative;
+  }
+  html body .container section:nth-child(3)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(12, 12, 12, 0.6039215686);
+    z-index: 0;
+  }
+  html body .container section:nth-child(4) {
+    background: url(../res/about.webp) no-repeat center/cover;
+    position: relative;
+  }
+  html body .container section:nth-child(4)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(12, 12, 12, 0.6039215686);
+    z-index: 0;
   }
 }/*# sourceMappingURL=styles.css.map */

@@ -11,6 +11,7 @@ const closeMenuBtn = document.getElementById("close-menu");
 const menuLinks = document.querySelectorAll(".ul-link");
 
 const sections = document.querySelectorAll("section");
+const container = document.querySelector(".container");
 
 const elementIsVisibleInViewport = (el, partiallyVisible = false) => {
   const { top, left, bottom, right } = el.getBoundingClientRect();
@@ -23,16 +24,6 @@ const elementIsVisibleInViewport = (el, partiallyVisible = false) => {
     : top >= 0 && left >= 0 && bottom <= innerHeight && right <= innerWidth;
 };
 
-function handleScroll() {
-  sections.forEach((section) => {
-    if (elementIsVisibleInViewport(section)) {
-      const sectionId = section.id;
-      const sectionLink = document.querySelector(`a[href="#${sectionId}"]`);
-      menuLinks.forEach((link) => link.classList.remove("active"));
-      sectionLink.classList.add("active");
-    }
-  });
-}
 
 
 // Define a function to execute when the display size is above a certain width
@@ -60,6 +51,20 @@ function executeOnLargeScreen() {
     link.addEventListener("click", () => handleLinkClick(link));
   });
   contactLink.addEventListener("click", () => handleLinkClick(contactLink));
+
+  function handleScroll() {
+    sections.forEach((section) => {
+      if (elementIsVisibleInViewport(section)) {
+        const sectionId = section.id;
+        const sectionLink = document.querySelector(`a[href="#${sectionId}"]`);
+        menuLinks.forEach((link) => link.classList.remove("active"));
+        sectionLink.classList.add("active");
+      }
+    });
+  }
+
+  handleScroll();
+  container.addEventListener("scroll", handleScroll);
 
   console.log("Executing on a large screen");
 }
@@ -117,6 +122,20 @@ function executeOnSmallScreen() {
     });
   });
 
+  function handleScroll() {
+    sections.forEach((section) => {
+      if (elementIsVisibleInViewport(section, true)) {
+        const sectionId = section.id;
+        const sectionLink = document.querySelector(`a[href="#${sectionId}"]`);
+        menuLinks.forEach((link) => link.classList.remove("active"));
+        sectionLink.classList.add("active");
+      }
+    });
+  }
+
+  handleScroll();
+  container.addEventListener("scroll", handleScroll);
+
   console.log("Executing on small screen");
 }
 
@@ -131,10 +150,6 @@ function handleResize() {
 
 // Initial check when the page loads
 handleResize();
-handleScroll();
 
 // Add an event listener to check on window resize
 window.addEventListener("resize", handleResize);
-const container = document.querySelector(".container");
-container.addEventListener("scroll", handleScroll);
-// window.addEventListener("scroll", handleScroll);
