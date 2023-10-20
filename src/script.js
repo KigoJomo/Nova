@@ -73,19 +73,22 @@ function executeOnSmallScreen() {
   // Your code for smaller screens here
 
   menuButton.addEventListener("click", () => {
-    links.style.transform = "translateX(0)";
+    // links.style.transform = "translateX(0)";
+    links.style.display = "flex";
     closeMenuBtn.style.display = "flex";
     menuButton.style.display = "none";
   });
   closeMenuBtn.addEventListener("click", () => {
-    links.style.transform = "translateX(100vw)";
+    // links.style.transform = "translateX(100vw)";
+    links.style.display = "none";
     closeMenuBtn.style.display = "none";
     menuButton.style.display = "block";
   });
 
   menuLinks.forEach((link) => {
     link.addEventListener("click", () => {
-      links.style.transform = "translateX(100vw)";
+      // links.style.transform = "translateX(100vw)";
+      links.style.display = "none";
       closeMenuBtn.style.display = "none";
       menuButton.style.display = "block";
       menuLinks.forEach((inactiveLink) => {
