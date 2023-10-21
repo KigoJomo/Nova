@@ -152,10 +152,7 @@ html {
     font-weight: 700;
     letter-spacing: 9.6px;
     text-transform: capitalize;
-    color: transparent;
-    background: url(../res/alps.webp) no-repeat center/cover;
-    -webkit-background-clip: text;
-            background-clip: text;
+    color: white;
   }
   html body .container section:nth-child(1) .left .skills {
     width: -moz-fit-content;
@@ -487,10 +484,7 @@ html {
     font-weight: 700;
     letter-spacing: 0px;
     text-transform: capitalize;
-    color: transparent;
-    background: url(../res/alps.webp) no-repeat center/cover;
-    -webkit-background-clip: text;
-            background-clip: text;
+    color: white;
   }
   html body .container section:nth-child(1) .left .skills {
     width: 100%;

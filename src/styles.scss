@@ -164,9 +164,7 @@ html {
                   font-weight: 700;
                   letter-spacing: 9.6px;
                   text-transform: capitalize;
-                  color: transparent;
-                  background: url(../res/alps.webp) no-repeat center/cover;
-                  background-clip: text;
+                  color: white;
                 }
               }
 
@@ -518,16 +516,13 @@ html {
                 gap: 0px;
 
                 span {
-                  // text-shadow: 5px 3px 50px #393838;
                   font-family: "Orbitron";
                   font-size: clamp(30px, 44px, 52px);
                   font-style: normal;
                   font-weight: 700;
                   letter-spacing: 0px;
                   text-transform: capitalize;
-                  color: transparent;
-                  background: url(../res/alps.webp) no-repeat center/cover;
-                  background-clip: text;
+                  color: white;
                 }
               }
 
