@@ -1445,7 +1445,7 @@ html {
             footer {
               z-index: 1;
               width: 100%;
-              height: 50px;
+              height: 99px;
               background-color: #000000;
               position: absolute;
               bottom: 0;
@@ -1458,6 +1458,7 @@ html {
                 background-color: #000;
                 width: fit-content;
                 padding: 20px 60px;
+                padding-bottom: 80px;
                 border-radius: 20px 20px 0px 0px;
                 box-shadow: 0px 0px 10px -1px #F2F2F2;
                 display: flex;
