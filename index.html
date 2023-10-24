@@ -227,12 +227,14 @@
         </section>
         <section id="contact">
             <h1>Let's get creative and bring your<br>next piece of art to <span>life</span></h1>
-            <form id="contact-form" action="./src/process.php" method="post">
+            <form id="contact-form" action="https://public.herotofu.com/v1/01b2c610-7308-11ee-95be-07c35b4ecd07" method="post" accept-charset="UTF-8">
                 <input type="text" id="name" name="name" required placeholder="name">
 
                 <input type="email" id="email" name="email" required placeholder="email" style="text-transform: lowercase;">
 
                 <textarea id="message" name="message" rows="4" required placeholder="message"></textarea>
+
+                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
 
                 <button type="submit" id="submit-btn">Send</button>
             </form>
@@ -300,20 +302,6 @@
             </footer>
         </section>
     </div>
-    <script>
-        // Simple client-side form validation using JavaScript
-        const form = document.getElementById("contact-form");
-        form.addEventListener("submit", function (e) {
-            const name = document.getElementById("name").value;
-            const email = document.getElementById("email").value;
-            const message = document.getElementById("message").value;
-
-            if (!name || !email || !message) {
-                e.preventDefault();
-                alert("Please fill in all fields.");
-            }
-        });
-    </script>
     <script src="./src/script.js"></script>
 </body>
 
