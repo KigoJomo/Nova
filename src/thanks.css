@@ -33,34 +33,71 @@ html body::before {
   background-color: rgba(12, 12, 12, 0.7450980392);
   z-index: 0;
 }
-html body .fore-ground {
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
+@media (min-width: 768px) {
+  html body .fore-ground {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  html body .fore-ground h1 {
+    text-align: center;
+    font-family: "Orbitron";
+    font-size: 48px;
+    font-weight: 600;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ffffff;
+  }
+  html body .fore-ground h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 400;
+  }
+  html body .fore-ground h2 span {
+    color: #f7fc00;
+  }
+  html body .fore-ground p {
+    text-align: center;
+    color: #ffffff;
+  }
+  html body .fore-ground p a:visited {
+    color: #ffffff;
+  }
 }
-html body .fore-ground h1 {
-  text-align: center;
-  font-family: "Orbitron";
-  font-size: 48px;
-  font-weight: 600;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #ffffff;
-}
-html body .fore-ground h2 {
-  text-align: center;
-  font-size: 24px;
-  font-weight: 400;
-}
-html body .fore-ground h2 span {
-  color: #f7fc00;
-}
-html body .fore-ground p {
-  text-align: center;
-  color: #ffffff;
-}
-html body .fore-ground p a:visited {
-  color: #ffffff;
+@media (max-width: 767px) {
+  html body .fore-ground {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 0px 20px;
+  }
+  html body .fore-ground h1 {
+    text-align: center;
+    font-family: "Orbitron";
+    font-size: 32px;
+    font-weight: 600;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ffffff;
+  }
+  html body .fore-ground h2 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  html body .fore-ground h2 span {
+    color: #f7fc00;
+  }
+  html body .fore-ground p {
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+  }
+  html body .fore-ground p a:visited {
+    color: #ffffff;
+  }
 }/*# sourceMappingURL=thanks.css.map */
