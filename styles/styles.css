@@ -38,8 +38,15 @@ html {
     background-color: rgba(0, 0, 0, 0.7607843137);
     border-radius: 0px 0px 20px 20px;
   }
-  html body .nav .logo img {
+  html body .nav .logo {
     width: 40px;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+  html body .nav .logo img {
+    width: 100%;
+    transform: scale(1.8) rotateZ(25deg);
   }
   html body .nav button {
     display: none;
@@ -111,7 +118,7 @@ html {
     justify-content: center;
     gap: 50px;
     padding: 110px 50px 50px 50px;
-    background: url(../res/Intro.webp) no-repeat fixed center/cover;
+    background: url(../images/Intro.webp) no-repeat fixed center/cover;
     position: relative;
   }
   html body .container section:nth-child(1)::before {
@@ -234,7 +241,7 @@ html {
     width: 100%;
   }
   html body .container section:nth-child(2) {
-    background: url(../res/My\ Work.webp) no-repeat fixed center/cover;
+    background: url(../images/My\ Work.webp) no-repeat fixed center/cover;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -389,7 +396,7 @@ html {
     border: 3px solid #f7fc00;
   }
   html body .container section:nth-child(3) {
-    background: url(../res/services.webp) no-repeat fixed center/cover;
+    background: url(../images/services.webp) no-repeat fixed center/cover;
     position: relative;
     padding: 5vh 7vw;
     display: flex;
@@ -513,7 +520,7 @@ html {
     font-size: 14px;
   }
   html body .container section:nth-child(4) {
-    background: url(../res/about.webp) no-repeat fixed center/cover;
+    background: url(../images/about.webp) no-repeat fixed center/cover;
     position: relative;
     padding: 0px 50px;
     padding-top: 15vh;
@@ -846,7 +853,7 @@ html {
     gap: 2vh;
     padding: 0 20px;
     padding-top: 7vh;
-    background: url(../res/Intro.webp) no-repeat fixed center/cover;
+    background: url(../images/Intro.webp) no-repeat fixed center/cover;
     position: relative;
   }
   html body .container section:nth-child(1)::before {
@@ -973,7 +980,7 @@ html {
     border: 1px solid #f7fc00;
   }
   html body .container section:nth-child(2) {
-    background: url(../res/My\ Work.webp) no-repeat fixed center/cover;
+    background: url(../images/My\ Work.webp) no-repeat fixed center/cover;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -1129,7 +1136,7 @@ html {
     border: 3px solid #f7fc00;
   }
   html body .container section:nth-child(3) {
-    background: url(../res/services.webp) no-repeat fixed center/cover;
+    background: url(../images/services.webp) no-repeat fixed center/cover;
     position: relative;
     padding: 5vh 20px;
     display: flex;
@@ -1247,7 +1254,7 @@ html {
     font-size: 12px;
   }
   html body .container section:nth-child(4) {
-    background: url(../res/about.webp) no-repeat fixed center/cover;
+    background: url(../images/about.webp) no-repeat fixed center/cover;
     position: relative;
     padding: 0px 20px;
     padding-top: 15vh;
