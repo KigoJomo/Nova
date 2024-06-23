@@ -37,6 +37,8 @@ html {
     overflow: hidden;
     background-color: rgba(0, 0, 0, 0.7607843137);
     border-radius: 0px 0px 20px 20px;
+    border: 1px solid #aaaaaa;
+    border-top: none;
   }
   html body .nav .logo {
     width: 40px;
@@ -46,7 +48,6 @@ html {
   }
   html body .nav .logo img {
     width: 100%;
-    transform: scale(1.8) rotateZ(25deg);
   }
   html body .nav button {
     display: none;
@@ -93,12 +94,12 @@ html {
     gap: 0;
   }
   html body .container::-webkit-scrollbar {
-    width: 10px;
+    width: 6px;
   }
   html body .container::-webkit-scrollbar-track {
     background-color: #a7a7a7;
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
     background-clip: padding-box;
   }
   html body .container::-webkit-scrollbar-thumb {
@@ -162,6 +163,11 @@ html {
     letter-spacing: 9.6px;
     text-transform: capitalize;
     color: white;
+    cursor: pointer;
+  }
+  html body .container section:nth-child(1) .left h2 span:hover {
+    color: #f7fc00;
+    transition: all 0.3s ease;
   }
   html body .container section:nth-child(1) .left .skills {
     width: -moz-fit-content;
@@ -235,6 +241,11 @@ html {
     border: 5px solid #f7fc00;
     -webkit-backdrop-filter: blur(20px);
             backdrop-filter: blur(20px);
+    transition: all 0.5s ease;
+  }
+  html body .container section:nth-child(1) .image img:hover {
+    border-radius: 30%;
+    transform: scale(1.01) rotateZ(5deg);
   }
   html body .container section:nth-child(1) .image svg {
     display: none;
@@ -1465,4 +1476,4 @@ html {
     height: 30px;
     fill: #f7fc00;
   }
-}/*# sourceMappingURL=styles.css.map */
+}
